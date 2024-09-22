@@ -6,7 +6,7 @@
 2. Navigate to the directory where you want to store the project.
    
 4. Run the following command:
- `git clone https://github.com/your-username/ejs-project.git`
+ `https://github.com/marklouisALTER/ejs-project.git`
 
 5. NPM INSTALL
    `npm install`
