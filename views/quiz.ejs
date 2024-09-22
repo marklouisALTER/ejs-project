@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1>Quiz Time!</h1>
+    <form action="/submit-quiz" method="POST">
+        <% quizData.forEach((quiz, index) => { %>
+            <div>
+                <h2><%= quiz.question %></h2>
+                <!--  foreach para sa mga choices -->
+                  <!-- qiuz.option -->
+                <% quiz.options.forEach(option => { %> 
+                    <label>
+                        <input type="radio" name="answer<%= index %>" value="<%= option %>"> <%= option %>
+                    </label>
+                <% }) %>
+            </div>
+        <% }) %>
+        <button type="submit">Submit Quiz</button>
+    </form>
+</body>
+</html>

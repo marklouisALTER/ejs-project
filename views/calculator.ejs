@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <section>
+        <h1>Calculator</h1>
+        <!-- naka form type para isahang view -->
+        <form action="/calculate" method="POST">
+            <input type="number" name="firstNumber" placeholder="First Number">
+            <input type="number" name="secondNumber" placeholder="Second Number">
+            <!-- dropdown nalang para sa selection ng operator -->
+            <select name="operator">
+                <option value="">--Select an operation--</option>
+                <option value="+">Addition (+)</option>
+                <option value="-">Subtraction (-)</option>
+                <option value="*">Multiplication (*)</option>
+                <option value="/">Division (/)</option>
+                <option value="average">Average</option>
+            </select>
+            <button type="submit">Calculate</button>
+        </form>
+
+        <% if (typeof result !== 'undefined') { %>
+            <h2>Result: <%= result %></h2>
+        <% } %>
+        
+    </section>
+</body>
+</html>
